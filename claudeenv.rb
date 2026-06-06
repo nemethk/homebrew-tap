@@ -5,20 +5,20 @@
 class Claudeenv < Formula
   desc "Claude Code environment manager — activate domain-specific skills, agents, and rules per project"
   homepage "https://github.com/nemethk/claudeenv"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nemethk/claudeenv/releases/download/v0.1.0/claudeenv_darwin_amd64.tar.gz"
-      sha256 "337d148d3e5faea3a362d5ed4dd9a8bf194bfa38081eb772f659891a57e983e8"
+      url "https://github.com/nemethk/claudeenv/releases/download/v0.1.1/claudeenv_darwin_amd64.tar.gz"
+      sha256 "fc3775041a82b0da097dcabd80801dcce847ccaea69a6fb7aa7a3c9bb174bead"
 
       define_method(:install) do
         bin.install "claudeenv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nemethk/claudeenv/releases/download/v0.1.0/claudeenv_darwin_arm64.tar.gz"
-      sha256 "287c782259eb2f476a048016578acb688ad5d49d761280947e27bef0dd04b943"
+      url "https://github.com/nemethk/claudeenv/releases/download/v0.1.1/claudeenv_darwin_arm64.tar.gz"
+      sha256 "435c2dfbc8390ac336fc238a6c97321ddbf619896c33d211e387fc4c0280760a"
 
       define_method(:install) do
         bin.install "claudeenv"
@@ -28,15 +28,15 @@ class Claudeenv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nemethk/claudeenv/releases/download/v0.1.0/claudeenv_linux_amd64.tar.gz"
-      sha256 "1cdf40fa663b755d8fc66c6d02775022f1e94701572ea8b4e4b288cb02a44df8"
+      url "https://github.com/nemethk/claudeenv/releases/download/v0.1.1/claudeenv_linux_amd64.tar.gz"
+      sha256 "22af7766e22293b34cc52d579475f7dd1a094578c6cc5f8b681ac77bb57496d2"
       define_method(:install) do
         bin.install "claudeenv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nemethk/claudeenv/releases/download/v0.1.0/claudeenv_linux_arm64.tar.gz"
-      sha256 "5499896f8484069a6cacfa6b126e47184cdcdb35a9a5a41d465dbe0ce476105a"
+      url "https://github.com/nemethk/claudeenv/releases/download/v0.1.1/claudeenv_linux_arm64.tar.gz"
+      sha256 "eccdfe60c5f2793d1da0f5f8d406c32f9273674ded0bd48dc31472c9250cb456"
       define_method(:install) do
         bin.install "claudeenv"
       end
