@@ -5,20 +5,20 @@
 class Ccsm < Formula
   desc "Claude Code Session Manager — list, search, and browse saved Claude Code sessions"
   homepage "https://github.com/nemethk/claude-code-session-manager"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nemethk/claude-code-session-manager/releases/download/v0.1.0/ccsm_darwin_amd64.tar.gz"
-      sha256 "873dd36cd1389e125cd1a1ae45c9791ad648f85ba3f1333b2a929e02c82d3fbe"
+      url "https://github.com/nemethk/claude-code-session-manager/releases/download/v0.1.1/ccsm_darwin_amd64.tar.gz"
+      sha256 "b52332c44e18904d93479d32bf923184fe37531485cddbdc8a6b6c12d8f94ace"
 
       define_method(:install) do
         bin.install "ccsm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nemethk/claude-code-session-manager/releases/download/v0.1.0/ccsm_darwin_arm64.tar.gz"
-      sha256 "1d027799b43ee61ccd23fa9970fe1d4781400a8b0fb9fccd3d31a60557fc3436"
+      url "https://github.com/nemethk/claude-code-session-manager/releases/download/v0.1.1/ccsm_darwin_arm64.tar.gz"
+      sha256 "0bdf8e01dc4c386668608f27c7a7331110f8308ce8b7d29782bb09ff2fd59570"
 
       define_method(:install) do
         bin.install "ccsm"
@@ -28,15 +28,15 @@ class Ccsm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nemethk/claude-code-session-manager/releases/download/v0.1.0/ccsm_linux_amd64.tar.gz"
-      sha256 "53baf4392d8a12124aa1b1b062bbb735504de4a94ffd29875aff712d6cc2e2a5"
+      url "https://github.com/nemethk/claude-code-session-manager/releases/download/v0.1.1/ccsm_linux_amd64.tar.gz"
+      sha256 "bf17ac2edc2d30c87f82a968625bfc0465de412a777bea3e131f5855cfb0b653"
       define_method(:install) do
         bin.install "ccsm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nemethk/claude-code-session-manager/releases/download/v0.1.0/ccsm_linux_arm64.tar.gz"
-      sha256 "1ab6a16fc908c83d9c98d63e0f95d22408f5659b151672cffffeaa61c04697aa"
+      url "https://github.com/nemethk/claude-code-session-manager/releases/download/v0.1.1/ccsm_linux_arm64.tar.gz"
+      sha256 "744537bf83a79c437b3ec100582cdbf4e00c91837644165c957f6c49ef93eb9d"
       define_method(:install) do
         bin.install "ccsm"
       end
